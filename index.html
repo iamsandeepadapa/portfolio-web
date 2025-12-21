@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Sandeep | Portfolio</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+<!-- Navbar -->
+<header>
+    <nav class="navbar">
+        <h2 class="logo">Sandeep Adapa</h2>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button id="theme-toggle"><i class="fas fa-moon"></i></button>
+    </nav>
+</header>
+
+<!-- main-section -->
+<section id="home" class="main-section">
+    <div class="main-content">
+        <div class="profile-picture">
+        <img src="./images/passportsize photograph.jpg" alt="profile picture">
+        </div>
+        <h1>Hi, I'm <span>Sandeep</span></h1>
+        <h3>Frontend / Full Stack Aspirant</h3>
+        <p>I build clean, responsive and interactive websites.</p>
+    <div class="main-buttons">
+        <a href="#projects" class="btn">View Projects</a>
+        <a href="./resume/Sandeep Adapa.pdf"
+        class="btn btn-outline"
+        download>
+            <i class="fas fa-download"></i> Resume
+        </a>
+    </div>
+    </div>
+</section>
+
+<!-- About -->
+<section id="about" class="section">
+    <h2>About Me</h2>
+    <p>
+        I am a passionate web developer with strong fundamentals in HTML, CSS, and JavaScript.
+        I enjoy creating user-friendly and visually appealing websites while continuously
+        improving my skills toward full stack development.
+    </p>
+</section>
+
+<!-- Skills -->
+<section id="skills" class="section">
+    <h2>Skills</h2>
+    <div class="skills-container">
+        <div class="skill-card">Python</div>
+        <div class="skill-card">SQL</div>
+        <div class="skill-card">MSExcel</div>
+        <div class="skill-card">HTML</div>
+        <div class="skill-card">CSS</div>
+        <div class="skill-card">JavaScript</div>
+        <div class="skill-card">React.js</div>
+        <div class="skill-card">Node.js</div>
+        <div class="skill-card">MongoDB</div>
+        <div class="skill-card">Git & GitHub</div>
+        <div class="skill-card">Communication-Skills</div>
+        <div class="skill-card">Team-Work</div>
+    </div>
+</section>
+<section id="education" class="section">
+    <h2>Education Details</h2>
+    <div class="education-container skills-container">
+        <div class="skill-card education-card">
+            Bachelor's Of Technology <br>
+            SRKR Engineering College, 2024 <br>
+            CGPA:7.87
+        </div>
+        <div class="skill-card education-card">
+            Intermediate Education <br>
+            Tirumala Junior College, 2020 <br>
+            CGPA:9.82
+        </div>
+        <div class="skill-card education-card">
+            Secondary Education <br>
+            Prathiba Public School, 2018 <br>
+            CGPA:9.8
+        </div>
+
+    </div>
+</section>
+<!-- Projects -->
+<section id="projects" class="section">
+    <h2>Projects</h2>
+    <div class="projects-container">
+        <div class="project-card">
+            <h3>E-commerce Websites</h3>
+            <p>Responsive E-commerce static website using HTML, CSS & JS.</p>
+        </div>
+        <div class="project-card">
+            <h3>Data Science projects</h3>
+            <p>Titanic Survival prediction, Iris Flower Prediction, Movies Rating Prediction Models</p>
+        </div>
+        <div class="project-card">
+            <h3>IOT Projects</h3>
+            <p>Automated Solar Grass Cutting Bot, Vechicle Integrated Alcohol Detector</p>
+        </div>
+    </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="section">
+    <h2>Contact Me</h2>
+    <!-- <form class="contact-form">
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <textarea placeholder="Your Message" required></textarea>
+        <button type="submit" class="btn">Send Message</button>
+    </form> -->
+    <form id="contact-form" class="contact-form">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" placeholder="Your Message" required></textarea>
+
+    <button type="submit" class="btn submit-btn">Send Message</button>
+</form>
+
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>© 2025 Sandeep Adapa. All rights reserved.</p>
+    <div class="socials">
+        <a href="https://github.com/iamsandeepadapa"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/sandeep-adapa-71415922a/"><i class="fab fa-linkedin"></i></a>
+    <a href="https://wa.me/919951423882?text=Hello%20Sandeep,%20I%20visited%20your%20portfolio."
+       target="_blank"
+       title="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>  
+  </div>
+</footer>
+
+<!-- 1. EmailJS library -->
+<!-- EmailJS library (LOAD ONCE) -->
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+<!-- EmailJS initialization (ONLY ONCE) -->
+<script>
+(function () {
+    emailjs.init("Tp51D38GahnQKU3Ch");
+})();
+</script>
+
+<!-- Your JS file -->
+<script src="script.js"></script>
+
+</body>
+</html>
