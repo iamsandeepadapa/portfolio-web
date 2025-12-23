@@ -179,7 +179,9 @@ body {
 }
 
 .education-container{
-grid-template-columns: repeat(auto-fit, minmax(200px, 3fr));
+display: flex;
+justify-content: space-around;
+
 }
 
 .education-card{
