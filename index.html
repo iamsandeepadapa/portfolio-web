@@ -10,6 +10,16 @@
 
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "Tp51D38GahnQKU3Ch",
+      });
+   })();
+</script>
 </head>
 <body>
 
@@ -120,18 +130,13 @@
 <!-- Contact -->
 <section id="contact" class="section">
     <h2>Contact Me</h2>
-    <!-- <form class="contact-form">
-        <input type="text" placeholder="Your Name" required />
-        <input type="email" placeholder="Your Email" required />
-        <textarea placeholder="Your Message" required></textarea>
-        <button type="submit" class="btn">Send Message</button>
-    </form> -->
     <form id="contact-form" class="contact-form">
-    <input type="text" name="name" placeholder="Your Name" required>
-    <input type="email" name="email" placeholder="Your Email" required>
-    <textarea name="message" placeholder="Your Message" required></textarea>
+    <input id="name" type="text" name="name" placeholder="Your Name" required>
+    <input id="email" type="email" name="email" placeholder="Your Email" required>
+     <input id="subject" type="text" name="subject" placeholder="Your subject" required>
+    <textarea id="message" name="message" placeholder="Your Message" required></textarea>
 
-    <button type="submit" class="btn submit-btn">Send Message</button>
+    <button  type="submit" class="btn submit-btn" onclick="sendMail()">Send Message</button>
 </form>
 
 </section>
@@ -145,23 +150,12 @@
     <a href="https://wa.me/919951423882?text=Hello%20Sandeep,%20I%20visited%20your%20portfolio."
        target="_blank"
        title="Chat on WhatsApp">
-        <i class="fab fa-whatsapp"></i>
+        <i class="fab fa-whatsapp" ></i>
     </a>  
   </div>
 </footer>
 
-<!-- 1. EmailJS library -->
-<!-- EmailJS library (LOAD ONCE) -->
-<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 
-<!-- EmailJS initialization (ONLY ONCE) -->
-<script>
-(function () {
-    emailjs.init("Tp51D38GahnQKU3Ch");
-})();
-</script>
-
-<!-- Your JS file -->
 <script src="script.js"></script>
 
 </body>

@@ -10,17 +10,17 @@ toggleBtn.addEventListener("click", () => {
         toggleBtn.innerHTML = '<i class="fas fa-moon"></i>';
     }
 });
-document.getElementById("contact-form").addEventListener("submit", function (e) {
-    e.preventDefault();
 
-    emailjs.sendForm(
-        "service_pbbit3p",
-        "template_7wt6dbo",
-        this
-    ).then(() => {
-        alert("Message Sent Succesfully");
-    }).catch(err => {
-        console.error(err);
-        alert("FAILED To Send");
-    });
-});
+function sendMail(){
+
+    let parameter={
+
+ 
+    name: document.getElementById("name").value,
+    email: document.getElementById("email").value,
+    subject: document.getElementById("subject").value,
+    message: document.getElementById("message").value
+      }
+      emailjs.send("service_pbbit3p","template_7wt6dbo",parameter).then (alert("Message has been send successfully!"));
+
+}
