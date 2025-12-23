@@ -34,3 +34,11 @@ form.addEventListener("submit", function (e) {
             alert("Failed to send message. Please try again.");
         });
 });
+
+
+const hamburger = document.getElementById("hamburger");
+const navLinks = document.getElementById("nav-links");
+
+hamburger.addEventListener("click", () => {
+    navLinks.classList.toggle("show");
+});

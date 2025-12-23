@@ -61,6 +61,30 @@ body {
     color: var(--text);
     font-weight: 500;
 }
+/* Hamburger Button */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: var(--text);
+    transition: all 0.3s ease;
+}
+.hamburger-container{
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    align-items: center;
+}
+
+
 
 #theme-toggle {
     background: none;
@@ -153,12 +177,11 @@ body {
 .project-card:hover {
     transform: translateY(-8px);
 }
-.education-container{
-    display: flex;
-    justify-content: space-between;
 
-    
+.education-container{
+grid-template-columns: repeat(auto-fit, minmax(200px, 3fr));
 }
+
 .education-card{
     width: 33%;
 }
@@ -200,5 +223,32 @@ cursor: pointer;
     }
     .education-card {
         width: 100%;
+    }
+}
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 65px;
+        right: 10%;
+        background: var(--bg);
+        flex-direction: column;
+        width: 200px;
+        padding: 15px;
+        border-radius: 8px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        display: none;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .nav-links li {
+        padding: 10px 0;
     }
 }
