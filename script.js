@@ -11,16 +11,26 @@ toggleBtn.addEventListener("click", () => {
     }
 });
 
-function sendMail(){
+const form = document.getElementById("contact-form");
 
-    let parameter={
+form.addEventListener("submit", function (e) {
+    e.preventDefault(); // stops page reload
 
- 
-    name: document.getElementById("name").value,
-    email: document.getElementById("email").value,
-    subject: document.getElementById("subject").value,
-    message: document.getElementById("message").value
-      }
-      emailjs.send("service_pbbit3p","template_7wt6dbo",parameter).then (alert("Message has been send successfully!"));
+    let parameters = {
+        name: document.getElementById("name").value,
+        email: document.getElementById("email").value,
+        subject: document.getElementById("subject").value,
+        message: document.getElementById("message").value
+    };
 
-}
+    emailjs
+        .send("service_pbbit3p", "template_b72cfsc", parameters)
+        .then(() => {
+            alert("Message sent successfully!");
+            form.reset();
+        })
+        .catch((error) => {
+            console.error("EmailJS Error:", error);
+            alert("Failed to send message. Please try again.");
+        });
+});
